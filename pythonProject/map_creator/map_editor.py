@@ -1,5 +1,5 @@
 import pickle
-from database.map_database import Database
+from pythonProject.database.map_database import Database
 database = Database()
 
 

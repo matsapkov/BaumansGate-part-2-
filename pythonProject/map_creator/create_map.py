@@ -1,8 +1,8 @@
 #редактор карт для Bauman's Gate
 #нужно уметь создавать карту
 
-from map_creator.map_obstacle import Obstacle
-from database.map_database import Database
+from pythonProject.map_creator.map_obstacle import Obstacle
+from pythonProject.database.map_database import Database
 import pickle
 import random
 database = Database()
@@ -12,7 +12,6 @@ class MapCreator:
     game_field = [[]]
     coordinates = {}
     sub_game_field = [[]]
-    #obstacles = []
 
     def __init__(self, size):
         self.SIZE = size
