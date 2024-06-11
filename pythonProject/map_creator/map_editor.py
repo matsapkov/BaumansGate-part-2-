@@ -1,5 +1,5 @@
 import pickle
-from pythonProject.database.map_database import Database
+from database.map_database import Database
 database = Database()
 
 
@@ -38,3 +38,4 @@ class MapEditor:
         print(DATA)
         print(type(DATA))
         database.update_table(DATA, NAME)
+

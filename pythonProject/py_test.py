@@ -2,9 +2,10 @@ import pytest
 import io
 import pickle
 from unittest.mock import patch
-from pythonProject.map_creator.create_map import MapCreator
-from pythonProject.database.map_database import Database
-from pythonProject.main import main
+from map_creator.create_map import MapCreator
+from database.map_database import Database
+from main import main
+from map_creator.map_editor import MapEditor
 
 database = Database()
 
@@ -52,11 +53,12 @@ def test_obstacles(prepare_map_creator):
 
 def test_map_editor(prepare_map_creator):
     fake_inputs1 = ['1', '6', '1', '$', '1', '2', '3', '%', '1', '2', '3', '£', '1', '2', '3', 'A1', 'done', 'A2', 'done', 'A3', 'done', 'ТестовоеСозданиеКарты']
-    fake_inputs2 = ['3', 'ТестовоеСозданиеКарты', '2']
+    fake_inputs2 = ['ТестовоеСозданиеКарты', '2']
     with patch('builtins.input', side_effect=fake_inputs1):
         prepare_map_creator.run()
     with patch('builtins.input', side_effect=fake_inputs2):
-        result = prepare_map_creator.run()
+        mapEditor = MapEditor()
+        result = mapEditor.change_map()
 
     assert result is None
 

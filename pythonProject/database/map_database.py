@@ -1,6 +1,6 @@
 #класс для работы с базой данных, куда будут записываться сериализованные пиклы
 
-from pythonProject.database.db_config import host, user, password, db_name
+from database.db_config import host, user, password, db_name
 import psycopg2
 
 

@@ -1,4 +1,4 @@
-from pythonProject.database.map_database import Database
+from database.map_database import Database
 database = Database()
 
 
@@ -11,11 +11,5 @@ class MapDeleter:
         search_name = input('Введите имя карты, которую вы хотите удалить...\n')
 
         database.delete_from(search_name)
-
-        # with open('searched_pickle.pkl', 'wb') as f:
-        #     f.write(data)
-        #
-        # with open('searched_pickle.pkl', 'rb') as f:
-        #     searched_map = pickle.load(f)
 
         print(f'Удалена карта {search_name}')

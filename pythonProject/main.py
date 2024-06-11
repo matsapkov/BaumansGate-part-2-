@@ -1,7 +1,7 @@
-from pythonProject.database.map_database import Database
-from pythonProject.map_creator.create_map import MapCreator
-from pythonProject.map_creator.map_deleter import MapDeleter
-from pythonProject.map_creator.map_editor import MapEditor
+from database.map_database import Database
+from map_creator.create_map import MapCreator
+from map_creator.map_deleter import MapDeleter
+from map_creator.map_editor import MapEditor
 
 database = Database()
 class main:
