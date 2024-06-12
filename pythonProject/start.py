@@ -1,3 +1,6 @@
-from pythonProject.main import main
+from main import main
 main_ = main()
 main_.run()
+
+
+
